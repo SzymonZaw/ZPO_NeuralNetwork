@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml" fx:controller="projektzpo.projekt.NeuralNetworkController">
+ <HBox GridPane.columnIndex="0" GridPane.rowIndex="3" GridPane.columnSpan="4" spacing="10">
+  <Button text="Train Network" onAction="#trainNetwork" />
+  <Button text="Test Network" onAction="#testNetwork" />
+ </HBox>
+ <HBox GridPane.columnIndex="0" GridPane.rowIndex="4" GridPane.columnSpan="4" spacing="10">
+  <Button text="Load Training Data" onAction="#loadTrainingData" />
+  <Button text="Load Test Data" onAction="#loadTestData"/>
+ </HBox>
+ <Label text="Number of Epochs:" GridPane.columnIndex="0" GridPane.rowIndex="10"/>
+ <TextField fx:id="numberOfEpochsField" GridPane.columnIndex="1" GridPane.rowIndex="10"/>
+ <Label fx:id="accuracyLabel" GridPane.columnIndex="0" GridPane.rowIndex="11"/>
+ <Label text="Learning Rates:" GridPane.columnIndex="0" GridPane.rowIndex="12"/>
+ <TextField fx:id="learningRatesField" GridPane.columnIndex="1" GridPane.rowIndex="12"/>
+ <Label text="Hidden Layer 1 Sizes:" GridPane.columnIndex="0" GridPane.rowIndex="13"/>
+ <TextField fx:id="hiddenLayer1SizesField" GridPane.columnIndex="1" GridPane.rowIndex="13"/>
+ <Label text="Hidden Layer 2 Sizes:" GridPane.columnIndex="0" GridPane.rowIndex="14"/>
+ <TextField fx:id="hiddenLayer2SizesField" GridPane.columnIndex="1" GridPane.rowIndex="14"/>
+</GridPane>
